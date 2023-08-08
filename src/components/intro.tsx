@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useSectionInView } from "@/lib/hooks";
 import Image from "next/image";
 import warmur from "../../public/warmurlogo.png";
+import Link from "next/link";
 
 export default function Intro() {
   const { ref } = useSectionInView("Home", 0.5);
@@ -43,7 +44,7 @@ export default function Intro() {
         animate={{ opacity: 1, y: 0 }}
       >
         <div className="font-bold text-6xl mb-10 mt-10">
-          We've built the ultimate home energy{" "}
+          We&apos;ve built the ultimate home energy{" "}
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-orange-400">
             {" "}
             calculator.
@@ -64,14 +65,14 @@ export default function Intro() {
           delay: 0.1,
         }}
       >
-        <a className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
-        href="https://www.warmur.co.uk/"
-        target="_blank">
-          <span className="bg-clip-text font-medium text-transparent bg-gradient-to-r from-blue-500 to-orange-500">
-            {" "}
-            Join CarbonFreeHome
-          </span>
-        </a>
+        <Link href="https://www.warmur.co.uk/" target="_blank">
+          <div className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10">
+            <span className="bg-clip-text font-medium text-transparent bg-gradient-to-r from-blue-500 to-orange-500">
+              {" "}
+              Join CarbonFreeHome
+            </span>
+          </div>
+        </Link>
       </motion.div>
     </section>
   );
