@@ -19,7 +19,7 @@ export default function About() {
     >
       <SectionHeading>About us</SectionHeading>
       <p className="mb-3">
-        <span className="font-medium">Warmur</span>is a new renewable
+        <span className="font-medium">Warmur</span>{" "}is a new renewable
         energy calculator, due to be released late in October 2023. Our mission
         is to help home owners navigate the journey to a carbon free home. We
         can even help you find an installer for your project. By signing up from
