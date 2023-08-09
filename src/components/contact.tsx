@@ -20,7 +20,7 @@ export default function Contact() {
         opacity: 1,
       }}
       transition={{
-        duration: 1,
+        duration: 2,
       }}
       viewport={{
         once: true,
