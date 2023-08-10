@@ -1,6 +1,6 @@
 import React from "react";
 import SectionHeading from "@/components/section-heading";
-import { getPosts } from "../ghost-config";
+import { getPosts } from "@/app/api/ghost-config";
 import Image from "next/image";
 import { FaArrowLeft } from "react-icons/fa";
 import Link from "next/link";

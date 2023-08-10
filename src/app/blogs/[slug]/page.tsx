@@ -1,5 +1,5 @@
 import React from "react";
-import { getPost } from "@/app/ghost-config";
+import { getPost } from "@/app/api/ghost-config";
 
 export default async function Page({ params }: { params: { slug: string } }) {
   console.log("params", params);
