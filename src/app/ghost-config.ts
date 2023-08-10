@@ -26,3 +26,9 @@ export async function getPosts() {
       throw new Error(err);
     });
 }
+
+export async function getPost(slug: string) {
+  return await api.posts.read({ slug }).catch((err) => {
+    throw new Error(err);
+  });
+}
