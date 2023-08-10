@@ -20,7 +20,7 @@ export default function Contact() {
         opacity: 1,
       }}
       transition={{
-        duration: 2,
+        duration: 10,
       }}
       viewport={{
         once: true,
@@ -31,7 +31,7 @@ export default function Contact() {
       <p className="text-gray-700 -mt-6 dark:text-white/80">
         Like the sound of Warmur? Get in touch if you have questions or
         suggestions. We&apos;d love to hear from you!{" "}
-        <a className="underline" href="mailto:example@gmail.com">
+        <a className="underline" href="mailto:info@warmur.co.uk">
           info@warmur.co.uk
         </a>{" "}
         <br />
