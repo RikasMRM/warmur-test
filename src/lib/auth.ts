@@ -19,7 +19,7 @@ export const options: NextAuthOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        const user = { id: "1", name: "rikas", password: "rikas" };
+        const user = { id: "1", name: "paul", password: "paul" };
 
         if (
           credentials?.username == user.name &&
@@ -34,8 +34,8 @@ export const options: NextAuthOptions = {
   ],
   callbacks: {
     async jwt({ token }) {
-      token.userRole = "admin"
-      return token
+      token.userRole = "admin";
+      return token;
     },
   },
 };
