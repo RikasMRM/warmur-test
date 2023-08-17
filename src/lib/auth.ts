@@ -2,7 +2,6 @@ import type { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import AzureADB2CProvider from "next-auth/providers/azure-ad-b2c";
 
-
 export const options: NextAuthOptions = {
   providers: [
     AzureADB2CProvider({
@@ -10,7 +9,8 @@ export const options: NextAuthOptions = {
       clientId: process.env.AZURE_AD_B2C_CLIENT_ID as string,
       clientSecret: process.env.AZURE_AD_B2C_CLIENT_SECRET as string,
       primaryUserFlow: process.env.AZURE_AD_B2C_PRIMARY_USER_FLOW,
-      authorization: { params: { scope: `https://${process.env.AZURE_AD_B2C_TENANT_NAME}.onmicrosoft.com/api/demo.read https://${process.env.AZURE_AD_B2C_TENANT_NAME}.onmicrosoft.com/api/demo.write offline_access openid` } },
+      authorization: { params: { scope: "offline_access openid" } },
+      // authorization: { params: { scope: `https://${process.env.AZURE_AD_B2C_TENANT_NAME}.onmicrosoft.com/api/demo.read https://${process.env.AZURE_AD_B2C_TENANT_NAME}.onmicrosoft.com/api/demo.write offline_access openid` } },
     }),
     CredentialsProvider({
       name: "Credentials",
@@ -32,4 +32,10 @@ export const options: NextAuthOptions = {
       },
     }),
   ],
+  callbacks: {
+    async jwt({ token }) {
+      token.userRole = "admin"
+      return token
+    },
+  },
 };
