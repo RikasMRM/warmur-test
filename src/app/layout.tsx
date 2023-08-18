@@ -12,11 +12,6 @@ import Script from "next/script";
 
 const montserrat = Montserrat({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "Warmur",
-  description: "warmur ",
-};
-
 export default function RootLayout({
   children,
 }: {
