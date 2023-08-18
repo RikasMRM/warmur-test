@@ -12,6 +12,16 @@ yarn dev
 pnpm dev
 ```
 
+## .env
+```bash
+NEXTAUTH_SECRET=
+
+AZURE_AD_B2C_TENANT_NAME=
+AZURE_AD_B2C_CLIENT_ID=
+AZURE_AD_B2C_CLIENT_SECRET=
+AZURE_AD_B2C_PRIMARY_USER_FLOW=
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
