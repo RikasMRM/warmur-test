@@ -6,9 +6,6 @@ import Link from "next/link";
 export default async function Home() {
   return (
     <>
-      <Link href="/" className="cursor-pointer items-left">
-        <FaArrowLeft size={20} />
-      </Link>
       <div className="flex flex-col items-center justify-center h-screen">
         <SectionHeading>Blogs</SectionHeading>
       </div>
